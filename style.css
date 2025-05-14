@@ -1,0 +1,668 @@
+@charset "UTF-8";
+
+/*ヘッダーのCSS*/
+header {
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+}
+
+ul {
+  list-style:none;
+}
+a {
+  text-decoration: none;
+}
+div {
+  padding: 0 30px;
+}
+.header_flex {
+  display: flex;
+  height:60px;
+  align-items: center;
+}
+.header_flex nav {
+  margin-left: auto;
+}
+.header_flex ul {
+  display: flex;
+}
+.header_flex ul li {
+  margin-left: 20px;
+}
+/*ここまで*/
+
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+h3 {
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px 0;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.image-box img {
+  width: 60%;
+  height: auto;
+}
+
+#image_graph {
+  width: 70%;
+  height: auto;
+  padding-left: 250px;
+}
+
+#image_circlegraph {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+p {
+  text-align: center;
+}
+
+.has_underline {
+  text-decoration: underline;
+}
+
+.YOUTUBE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.caution {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1080px; 
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.caution p {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  color: gray;
+  font-size: 14px; 
+  line-height: 1.6; 
+  padding: 5px;
+}
+
+.class_schedule {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.class_schedule p {
+  text-align: left;
+  font-weight: bold;
+}
+
+.satisfication {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+  width: 70%;
+  margin: 0 auto; 
+}
+
+.satisfication img {
+  width: 50%; 
+  height: auto;
+}
+
+.satisfication_caution {
+  padding-top: 20px;
+  color: gray;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.recommend {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.recommend img {
+  flex: 1 1 calc(33.33% - 10px);
+  max-width: calc(33.33% - 10px);
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.p_left {
+  display: flex;
+  justify-content: center;
+}
+
+.p_left p {
+  text-align: left;
+  max-width: 800px;
+}
+
+.showblog p {
+  text-align: left;
+}
+
+/*プレスリリース等の「続きを読む」ボタンのCSS*/
+.showblog {
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: left;
+}
+.showblog h4 {
+  margin-top: 1.5em;
+}
+.readmore {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.showblog input {
+  display: none;
+}
+/*続きを読むボタン*/
+.showblog label {
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 1.5em; /*ボタンの上の余白*/
+  margin-bottom: 1.5em; /*ボタンの下の余白*/
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  color: #ea7da2;
+  border: 2px solid #ea7da2;
+  border-radius: 3px;
+}
+/*＋マーク*/
+.showblog label::after {
+  position: absolute;
+  content: '';
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  background: #ea7da2;
+  clip-path: polygon(0 40%, 40% 40%, 40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%);
+}
+.showblog label:hover::after {
+  color: #ffffff;
+}
+/*hover*/
+.showblog label:hover {
+  transition: all 0.3s;
+  color: #ffffff;
+  background: #ea7da2(218, 60, 65 ,0.7);
+}
+.showblog label:hover::after {
+  background: #ffffff;
+}
+/*-マーク*/
+.showblog input:checked ~ label::after {
+  background: #ea7da2;
+  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+}
+/*hover*/
+.showblog input:checked ~ label:hover::after {
+  background: #ffffff;
+}
+.showblog div.readmore {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  height: 0;
+  margin-top: -1px;
+}
+.showblog input:checked ~ div.readmore {
+  transition: height 0.5s ease-in-out;
+}
+/* 高さを設定 */
+.showblog input:checked ~ div.readmore {
+  height: auto;
+}
+/*ここまで*/
+
+
+.feautures {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 40px 0; 
+}
+
+.feautures ul {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feautures li {
+  width: 180px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left; 
+  padding: 20px;
+}
+
+.feautures img {
+  width: 200px; 
+  height: auto; 
+  margin-bottom: 3px; 
+}
+
+.feautures h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  min-height: 48px;
+}
+
+.feautures p {
+  font-size: 14px;
+  min-height: 40px;
+  text-align: left;
+}
+
+.sitter {
+  max-width: 800px; 
+  margin: 0 auto; 
+  text-align: left; 
+}
+
+.sitter h4 {
+  margin-left: 30px;
+}
+
+.LIVEfeauture h3 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.LIVEfeauture p {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.feature_image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.feature_image img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 32px; 
+  padding: 40px 20px;
+}
+
+.skill-item {
+  text-align: center;
+}
+
+.skill-item h4 {
+  font-size: 1.1rem;
+  color: #4c484f;
+}
+
+.skill-item img {
+  width: 100%;
+  height: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.support {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.support > div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: 310px;
+}
+
+.support img {
+  width: 97%;
+  height: auto;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.support h4 {
+  padding-bottom: 10px;
+}
+
+.support p {
+  text-align: left;
+  font-size: 0.95em;
+  padding-top: 3px;
+}
+
+.interview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interview_image {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.interview_image img {
+  width: 40%; 
+  height: auto;
+}
+
+.interview_link {
+  text-align: center;
+  color: #f8a84f;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.teacher_schedule {
+  display: flex;
+  justify-content: center;
+}
+
+.teacher_schedule p {
+  text-align: left;
+}
+
+/*講師の紹介*/
+.teacher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teacher_profile {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap; 
+  max-width: 1100px;
+  width: 100%;
+  justify-content: center;
+}
+
+.teacher_profile img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.teacher_info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.teacher_info h3,
+.teacher_info h4 {
+  text-align: left;
+  margin: 0.5em 0;
+}
+
+.teacher_info h3 {
+  color: #45496a;
+}
+
+.teacher_info ul {
+  padding-left: 20px;
+  margin-top: 0;
+}
+/*ここまで*/
+
+
+.image_comparison {
+  width: 50%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.caution_famm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.caution_famm p {
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.question, .answer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.question p {
+  font-weight: bold;
+}
+
+.question p, .answer p {
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.qa {
+  margin: 1.5em;
+}
+
+.Other {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.Other > div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: 310px;
+}
+
+.Other img {
+  width: 97%;
+  height: auto;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.Other h4 {
+  padding-bottom: 10px;
+}
+
+.Other p {
+  text-align: left;
+  font-size: 0.90em;
+  padding-top: 3px;
+}
+
+.Other a {
+   text-align: left;
+  font-size: 0.95em;
+  padding-top: 5px;
+}
+
+.freecall_image a {
+  display: flex;
+  justify-content: center;
+}
+
+.freecall_image img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/*無料電話相談会の日程*/
+.schedule-container {
+      display: flex;
+      gap: 20px;
+      font-family: sans-serif;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .day-column {
+      border: 1px solid #ccc;
+      padding: 5px;
+      width: max-content;
+      white-space: nowrap;
+    }
+    .day-column h3 {
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .slot {
+      margin-bottom: 6px;
+    }
+    .full {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    /*ここからフッター*/
+    footer {
+      border-top: 1px solid #ccc;
+      padding-top: 0;
+      margin-top: 50px;
+    }
+
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 10px;
+      flex-wrap: wrap; 
+    }
+    
+    .footer-img img {
+      max-width: 100%;
+      width: 500px;
+      height: auto;
+      object-fit: contain;
+    }
+    
+    .footer-descriprion {
+      max-width: 500px;
+    }
+    
+    .footer-descriprion h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-descriprion p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    
+    /* オレンジのボタン部分 */
+    .registration {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .registration h2 {
+      display: inline-block;
+      background-color: #f8a84f;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    
+    /* フッターリンク */
+    .footer_flex {
+      display: flex;
+      justify-content: center;
+      padding: 30px 10px;
+      background-color: #f9f9f9;
+    }
+
+    .footer_flex nav {
+      width: 100%;
+    }
+    
+    .footer_flex ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+    }
+    
+    .footer_flex li a {
+      text-decoration: none;
+      color: #f8a84f;
+      font-size: 14px;
+    }
+    
